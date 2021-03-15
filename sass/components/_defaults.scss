@@ -1,0 +1,20 @@
+body {
+  background-color: $h-text-color;
+  font-family: 'Roboto', sans-serif;
+  color: $primary-text-color;
+  letter-spacing: 0.03em;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
