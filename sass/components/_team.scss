@@ -1,0 +1,93 @@
+/* наша команда */
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $button-color;
+}
+
+.team-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * #{$card-set-gap});
+  max-width: 100%;
+}
+
+.team-card__item {
+  flex-basis: calc(100% / 4 - #{$card-set-gap});
+  margin-left: #{$card-set-gap};
+}
+
+team-card__img {
+  width: 270px;
+}
+
+.team-card__article {
+  box-shadow: $card-shadow;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card__content {
+  padding: 30px 20px;
+  background: $h-text-color;
+  border: 1px solid $card-border;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.team-card__name {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  color: $primary-text-color;
+}
+
+.team-card__specialty {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.17;
+  color: $dop-text-color;
+}
+
+* -------Иконки Соц сетей-------- */ .social-link__list {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $bcolor-icon;
+}
+
+.social-link__list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  @include transition(background-color);
+}
+
+.social-link__link:hover,
+.social-link__link:focus {
+  background-color: $title-text-color;
+}
+
+.social-link__link:hover svg,
+.social-link__link:focus svg {
+  fill: $h-text-color;
+}
+
+.social-link svg {
+  fill: $icon-color;
+  @include transition(fill);
+}
