@@ -9,7 +9,7 @@
   padding-bottom: 94px;
 }
 
-.about-card__icon {
+.about-card__box {
   width: 270px;
   height: 120px;
   background-color: $button-color;
@@ -36,7 +36,7 @@
   color: $dop-text-color;
 }
 
-.about-card {
+.about-card__list {
   padding: 0;
   display: flex;
 }

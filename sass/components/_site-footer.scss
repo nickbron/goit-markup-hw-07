@@ -5,20 +5,18 @@
   padding-bottom: 60px;
 }
 
-.footer {
+.page-footer__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.logo-footer {
-  margin: 0;
-  margin-bottom: 20px;
-  color: $h-text-color;
-  background-color: $hero-color;
-}
-
-.address {
+.address__container {
   font-style: normal;
   color: $h-text-color;
   font-weight: 400;
@@ -42,7 +40,8 @@
 }
 
 /* --------------иконки СОЦ СЕТЕЙ footer --------*/
-.social__title {
+.page-footer-social__title,
+.page-footer-subscribe__title {
   font-style: normal;
   color: $h-text-color;
   font-weight: 700;
@@ -53,7 +52,7 @@
   margin-bottom: 20px;
 }
 
-.social__item {
+.page-footer-social__item {
   padding: 0;
   margin: 0;
   display: inline-block;
@@ -63,11 +62,11 @@
   background-color: $bcolor-icon;
 }
 
-.social__item:not(:last-child) {
+.page-footer-social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social__link {
+.page-footer-social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,13 +81,13 @@
   }
 }
 
-.social__icon {
+.page-footer-social__icon {
   fill: white;
 }
 
 /* --------------Подписаться-------------- */
 
-.subscribe__input {
+.page-footer-subscribe__input {
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -97,7 +96,7 @@
   border-radius: 4px;
 }
 
-.subscribe__button {
+.page-footer-subscribe__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -113,7 +112,7 @@
   cursor: pointer;
 }
 
-.subscribe__button--icon {
+.page-footer-subscribe__icon {
   fill: currentColor;
   margin-left: 10px;
 }

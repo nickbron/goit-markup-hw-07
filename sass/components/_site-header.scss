@@ -1,27 +1,12 @@
-span {
-  color: $title-text-color;
-}
-
 .page-header {
   outline: 1px solid $header-border;
 }
 
-.page-header__main-nav {
+.page-header__nav {
   display: flex;
   align-items: center;
 }
 
-.logo,
-.logof {
-  text-decoration: none;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: $logo-color;
-}
-
-/* Site nav */
 .site-nav__link--current {
   color: $title-text-color;
 }
@@ -43,6 +28,15 @@ span {
   color: $title-text-color;
 }
 
+.site-nav__list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contacts-nav__link {
   text-decoration: none;
   font-weight: 500;
@@ -62,40 +56,25 @@ span {
   fill: $title-text-color;
 }
 
+.contacts-nav__list {
+  display: flex;
+  padding: 0;
+  margin-left: auto;
+}
+
+.contacts-nav__item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* ---------ИКОНКИ */
 .contacts-nav__link {
   display: flex;
   align-items: center;
 }
 
-.icon-cont {
+.contacts-nav__icon {
   display: inline;
   margin-right: 10px;
-}
-
-/* ------------------------ */
-
-.site-nav,
-.contacts-nav {
-  display: flex;
-}
-
-.contacts-nav {
-  padding: 0;
-  margin-left: auto;
-}
-
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav {
-  margin-left: 93px;
-}
-
-.contacts-nav__item:not(:last-child) {
-  // margin-left: 30px;
-  margin-right: 30px;
 }
 
 /* ------------подчёркивание ссылки текущей страницы------- */

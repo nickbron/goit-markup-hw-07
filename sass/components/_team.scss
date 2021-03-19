@@ -6,28 +6,28 @@
   background-color: $button-color;
 }
 
-.team-card {
+.team__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * #{$card-set-gap});
   max-width: 100%;
 }
 
-.team-card__item {
+.team__item {
   flex-basis: calc(100% / 4 - #{$card-set-gap});
   margin-left: #{$card-set-gap};
 }
 
-team-card__img {
+.team__img {
   width: 270px;
 }
 
-.team-card__article {
+.team__article {
   box-shadow: $card-shadow;
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-card__content {
+.team__content {
   padding: 30px 20px;
   background: $h-text-color;
   border: 1px solid $card-border;
@@ -35,7 +35,7 @@ team-card__img {
   text-align: center;
 }
 
-.team-card__name {
+.team__name {
   margin: 0px;
   margin-bottom: 10px;
   font-weight: 500;
@@ -44,7 +44,7 @@ team-card__img {
   color: $primary-text-color;
 }
 
-.team-card__specialty {
+.team__specialty {
   margin: 0;
   margin-bottom: 16px;
   font-weight: 400;
@@ -53,7 +53,8 @@ team-card__img {
   color: $dop-text-color;
 }
 
-* -------Иконки Соц сетей-------- */ .social-link__list {
+// Иконки Соц сетей
+.team-social__item {
   padding: 0;
   margin: 0;
   display: inline-block;
@@ -63,11 +64,11 @@ team-card__img {
   background-color: $bcolor-icon;
 }
 
-.social-link__list:not(:last-child) {
+.team-social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social-link__link {
+.team-social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,17 +78,17 @@ team-card__img {
   @include transition(background-color);
 }
 
-.social-link__link:hover,
-.social-link__link:focus {
+.team-social__link:hover,
+.team-social__link:focus {
   background-color: $title-text-color;
 }
 
-.social-link__link:hover svg,
-.social-link__link:focus svg {
+.team-social__link:hover .team-social__icon,
+.team-social__link:focus .team-social__icon {
   fill: $h-text-color;
 }
 
-.social-link svg {
+.team-social__icon {
   fill: $icon-color;
   @include transition(fill);
 }
