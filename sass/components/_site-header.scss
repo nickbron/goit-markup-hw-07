@@ -47,12 +47,18 @@
   padding-top: 32px;
   padding-bottom: 32px;
   @include transition(color);
+  // @include transition(fill);
   // transition: color 250ms $timing-fn, fill 250ms $timing-fn;
 }
 
 .contacts-nav__link:hover,
 .contacts-nav__link:focus {
   color: $title-text-color;
+  // fill: $title-text-color;
+}
+
+.contacts-nav__link:hover .contacts-nav__icon,
+.contacts-nav__link:focus .contacts-nav__icon {
   fill: $title-text-color;
 }
 
@@ -75,6 +81,7 @@
 .contacts-nav__icon {
   display: inline;
   margin-right: 10px;
+  @include transition(fill);
 }
 
 /* ------------подчёркивание ссылки текущей страницы------- */

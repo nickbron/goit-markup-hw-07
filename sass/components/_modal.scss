@@ -38,6 +38,16 @@
   @include transition(transform);
 }
 
+.modal__close-button:hover .modal__close-icon,
+.modal__close-button:focus .modal__close-icon {
+  fill: $title-text-color;
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  @include transition(fill);
+}
+
 .modal__close-button {
   position: absolute;
   display: flex;
@@ -51,13 +61,6 @@
   border-radius: 50%;
   top: 8px;
   right: 8px;
-  @include transition(fill);
-}
-
-.modal__close-button :hover,
-.modal__close-button :focus {
-  fill: $title-text-color;
-  cursor: pointer;
 }
 
 .application-form__title {

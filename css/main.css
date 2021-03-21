@@ -103,6 +103,10 @@ img {
 .contacts-nav__link:hover,
 .contacts-nav__link:focus {
   color: #2196f3;
+}
+
+.contacts-nav__link:hover .contacts-nav__icon,
+.contacts-nav__link:focus .contacts-nav__icon {
   fill: #2196f3;
 }
 
@@ -131,6 +135,8 @@ img {
 .contacts-nav__icon {
   display: inline;
   margin-right: 10px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------------подчёркивание ссылки текущей страницы------- */
@@ -624,7 +630,7 @@ img {
 }
 
 /* portfolio */
-.work__title {
+.portfolio__title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -638,11 +644,11 @@ img {
   overflow: hidden;
 }
 
-.work {
+.portfolio {
   padding-top: 94px;
 }
 
-.work-filter,
+.filters__list,
 .our-works {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -651,22 +657,22 @@ img {
       flex-wrap: wrap;
 }
 
-.work-filter {
+.filters__list {
   margin-bottom: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.work-filter__item {
+.filters__item {
   margin-right: 8px;
 }
 
-.work-filter__item:last-child {
+.filters__item:last-child {
   margin-right: 0px;
 }
 
-.work-filter__button {
+.filters__button {
   display: block;
   padding: 6px 22px;
   border-radius: 4px;
@@ -683,8 +689,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-filter__button:hover,
-.work-filter__button:focus {
+.filters__button:hover,
+.filters__button:focus {
   color: white;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -692,7 +698,7 @@ img {
 }
 
 /* Наши работы */
-.work-card {
+.work__list {
   padding: 0px;
   margin: 0;
   padding-bottom: 94px;
@@ -706,7 +712,7 @@ img {
   margin-top: calc(-1 * 30px);
 }
 
-.work-card__item {
+.work__item {
   -ms-flex-preferred-size: calc(100% / 3 - 30px);
       flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
@@ -718,32 +724,33 @@ a:link {
   /* Убирает подчеркивание для ссылок */
 }
 
-.work-card__item:hover,
-.work-card__item:focus {
-  border: 1px solid #eeeeee;
+.work__item:hover,
+.work__item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-card__thumb {
+.work__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.work-card__thumb img {
+.work__img {
   width: 370px;
 }
 
-.work-card__content {
+.work__content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   color: #212121;
   line-height: 2;
 }
 
-.work-card__name {
+.work__name {
   margin: 0;
   margin-bottom: 4px;
   font-family: inherit;
@@ -752,7 +759,7 @@ a:link {
   font-size: 18px;
 }
 
-.work-card__description {
+.work__description {
   margin: 0;
   font-family: inherit;
   font-size: 16px;
@@ -761,7 +768,7 @@ a:link {
   line-height: 1.87;
 }
 
-.work-card__overlay {
+.work__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -776,7 +783,7 @@ a:link {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-card__overlay-text {
+.work__overlay-text {
   padding: 63px 24px;
   font-family: inherit;
   color: white;
@@ -784,8 +791,8 @@ a:link {
   line-height: 1.56;
 }
 
-.work-card__item:hover .work-card__overlay,
-.work-card__item:focus .work-card__overlay {
+.work__item:hover .work__overlay,
+.work__item:focus .work__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -835,6 +842,17 @@ a:link {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal__close-button:hover .modal__close-icon,
+.modal__close-button:focus .modal__close-icon {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal__close-button {
   position: absolute;
   display: -webkit-box;
@@ -854,14 +872,6 @@ a:link {
   border-radius: 50%;
   top: 8px;
   right: 8px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__close-button :hover,
-.modal__close-button :focus {
-  fill: #2196f3;
-  cursor: pointer;
 }
 
 .application-form__title {

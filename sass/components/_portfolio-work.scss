@@ -1,33 +1,33 @@
 /* portfolio */
 
-.work__title {
+.portfolio__title {
   @include visually-hidden;
 }
 
-.work {
+.portfolio {
   padding-top: 94px;
 }
 
-.work-filter,
+.filters__list,
 .our-works {
   display: flex;
   flex-wrap: wrap;
 }
 
-.work-filter {
+.filters__list {
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.work-filter__item {
+.filters__item {
   margin-right: 8px;
 }
 
-.work-filter__item:last-child {
+.filters__item:last-child {
   margin-right: 0px;
 }
 
-.work-filter__button {
+.filters__button {
   display: block;
   padding: 6px 22px;
   border-radius: 4px;
@@ -43,8 +43,8 @@
   @include transition(background-color);
 }
 
-.work-filter__button:hover,
-.work-filter__button:focus {
+.filters__button:hover,
+.filters__button:focus {
   color: $h-text-color;
   background-color: $title-text-color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -52,7 +52,7 @@
 }
 
 /* Наши работы */
-.work-card {
+.work__list {
   padding: 0px;
   margin: 0;
   padding-bottom: 94px;
@@ -63,7 +63,7 @@
   margin-top: calc(-1 * #{$card-set-gap});
 }
 
-.work-card__item {
+.work__item {
   flex-basis: calc(100% / 3 - #{$card-set-gap});
   margin-left: #{$card-set-gap};
   margin-top: #{$card-set-gap};
@@ -73,31 +73,31 @@ a:link {
   text-decoration: none; /* Убирает подчеркивание для ссылок */
 }
 
-.work-card__item:hover,
-.work-card__item:focus {
-  border: 1px solid $card-border;
+.work__item:hover,
+.work__item:focus {
+  // border: 1px solid $card-border;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  @include transition(border);
+  @include transition(box-shadow);
 }
 
-.work-card__thumb {
+.work__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.work-card__thumb img {
+.work__img {
   width: 370px;
 }
 
-.work-card__content {
+.work__content {
   padding: 20px 24px;
   border: 1px solid $card-border;
   color: $primary-text-color;
   line-height: 2;
 }
 
-.work-card__name {
+.work__name {
   margin: 0;
   margin-bottom: 4px;
   font-family: inherit;
@@ -106,7 +106,7 @@ a:link {
   font-size: 18px;
 }
 
-.work-card__description {
+.work__description {
   margin: 0;
   font-family: inherit;
   font-size: 16px;
@@ -115,7 +115,7 @@ a:link {
   line-height: 1.87;
 }
 
-.work-card__overlay {
+.work__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -126,7 +126,7 @@ a:link {
   @include transition(transform);
 }
 
-.work-card__overlay-text {
+.work__overlay-text {
   padding: 63px 24px;
   font-family: inherit;
   color: $h-text-color;
@@ -134,7 +134,7 @@ a:link {
   line-height: 1.56;
 }
 
-.work-card__item:hover .work-card__overlay,
-.work-card__item:focus .work-card__overlay {
+.work__item:hover .work__overlay,
+.work__item:focus .work__overlay {
   transform: translateY(0);
 }
